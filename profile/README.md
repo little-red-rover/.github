@@ -18,6 +18,15 @@ At the heart of Little Red Rover is an ESP32-S3, which collects sensor data and 
 The sensor data is relayed over UDP to a host computer, which trasnforms the data into ROS messages on appropriate topics.
 Algorithms running within ROS consume the sensor data and generate control commands for the rover, which are relayed back over UDP to the microcontroller.
 
+## Features
+
+* 360 degree LiDAR scanner @ 4000 hz with 8 m range
+* 6 degree of freedom IMU
+* Wheel encoders with 2340 pulses per rotation
+* 5000 mAh battery with USB C charging
+* Supports all major operating systems
+
+
 ## Learn More
 
 [Docs](https://github.com/little-red-rover/lrr-docs)
