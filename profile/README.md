@@ -12,23 +12,26 @@ Little Red Rover was developed with educational use in mind. Each rover is affor
 
 LRR is perfect for robotics hobbyists interested in elevating their work. Breaking out of tinkery ecosystems like Arduino can be difficult, and LRR is an affordable starting point.
 
-## Stackup
+## How Does it Work?
 
-Little Red Rover is currently in developement, and the specs below may or may not be implemented already. For now, this section serves as a roadmap.
+At the heart of Little Red Rover is an ESP32-S3, which collects sensor data and issues commands to the drive base.
+The sensor data is relayed over UDP to a host computer, which trasnforms the data into ROS messages on appropriate topics.
+Algorithms running within ROS consume the sensor data and generate control commands for the rover, which are relayed back over UDP to the microcontroller.
 
-### Software ([README](https://github.com/usedhondacivic/little_red_rover/tree/main/SOFTWARE))
-* ESP32 onboard. Publishes sensor data, encoded using protobuf, over a UDP BSD socket
-* Dockerized development environment runs on any OS and communicates with the rover wirelessly
-* Hardware abstraction node provided for handling robot connection and republishing deserialized messages
+## Learn More
 
-### Hardware ([README](https://github.com/usedhondacivic/little_red_rover/tree/main/HARDWARE))
-* [FHL-LD20 Lidar](https://www.youyeetoo.com/products/youyeetoo-fhl-ld20)
-* Custom circuit board integrated as the rovers body
-* Wheel encoders and IMU for odometry
-* Designed for low effort assembly and large scale production
+[Docs](https://github.com/little-red-rover/lrr-docs)
+
+[Template project](https://github.com/little-red-rover/lrr-template-project)
+
+[ROS environment](https://github.com/little-red-rover/lrr-ros)
+
+[Firmware](https://github.com/little-red-rover/lrr-firmware)
+
+[Hardware](https://github.com/little-red-rover/lrr-hardware)
 
 ## Thanks
 
-LRR is part of my Masters of Engineering (MEng) thesis for Cornell University.
+Little Red Rover is my Masters of Engineering (MEng) thesis for Cornell University.
 
 Special thanks to my advisor, [Professor Tapomayukh Bhattacharjee](https://robotics.cornell.edu/faculty/tapomayukh-bhattacharjee-bio/) of the [EmPRISE Lab](https://emprise.cs.cornell.edu/). LRR was inspired by his course, Foundations of Robotics, and his help on the project has been invaluable.
