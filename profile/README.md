@@ -15,7 +15,7 @@ LRR is perfect for robotics hobbyists interested in elevating their work. Breaki
 ## How Does it Work?
 
 At the heart of Little Red Rover is an ESP32-S3, which collects sensor data and issues commands to the drive base.
-The sensor data is relayed over UDP to a host computer, which trasnforms the data into ROS messages on appropriate topics.
+The sensor data is relayed over UDP to a host computer, which transforms the data into ROS messages on appropriate topics.
 Algorithms running within ROS consume the sensor data and generate control commands for the rover, which are relayed back over UDP to the microcontroller.
 
 ## Features
