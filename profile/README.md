@@ -15,7 +15,7 @@ LRR is perfect for robotics hobbyists interested in elevating their work. Breaki
 ## How Does it Work?
 
 At the heart of Little Red Rover is an ESP32-S3, which collects sensor data and issues commands to the drive base.
-The sensor data is relayed over a TCP link to a host computer, which transforms the data into ROS messages on appropriate topics.
+Sensor data is relayed over a TCP link to a host computer, which transforms the data into ROS messages on appropriate topics.
 Algorithms running within ROS consume the sensor data and generate control commands for the rover, which are relayed back over TCP to the microcontroller.
 
 ## Features
@@ -24,7 +24,7 @@ Algorithms running within ROS consume the sensor data and generate control comma
 * 6 degree of freedom IMU
 * Wheel encoders with 2340 pulses per rotation
 * 5000 mAh battery with USB C charging
-* Supports all major operating systems
+* Supports ALL major operating systems through Docker
 
 
 ## Learn More
